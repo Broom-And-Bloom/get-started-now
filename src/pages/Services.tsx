@@ -82,7 +82,7 @@ const Services = () => {
       title: "Post-Construction Cleaning",
       description:
         "We remove fine dust, debris, and renovation residue so you can enjoy the finished results of your project.",
-      features: ["Construction dust removal", "Window and frame cleaning", "Floor polishing and sealing"],
+      features: ["Construction dust removal", "Window and frame cleaning"],
       image: constructionImage,
     },
     {
