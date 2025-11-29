@@ -54,7 +54,7 @@ const Services = () => {
       icon: Key,
       title: "End of Tenancy Cleaning",
       description: "A complete, top-to-bottom clean to help make moving out smooth and stress-free.",
-      features: ["Full property checklist", "Professional equipment", "Certified cleaning team"],
+      features: ["Full property checklist", "Professional equipment"],
       image: tenancyImage,
     },
     {
