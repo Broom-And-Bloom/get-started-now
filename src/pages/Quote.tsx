@@ -211,7 +211,6 @@ const Quote = () => {
                         <SelectContent>
                           <SelectItem value="flat">Flat/Apartment</SelectItem>
                           <SelectItem value="house">House</SelectItem>
-                          <SelectItem value="office">Office</SelectItem>
                           <SelectItem value="commercial">Commercial Space</SelectItem>
                         </SelectContent>
                       </Select>
