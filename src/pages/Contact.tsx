@@ -40,12 +40,34 @@ const Contact = () => {
       );
       
       // Open WhatsApp
-      window.open(`https://wa.me/447541786867?text=${whatsappMessage}`, '_blank');
+      const whatsappUrl = `https://wa.me/447541786867?text=${whatsappMessage}`;
+      const popup = window.open(whatsappUrl, '_blank');
       
-      toast({
-        title: "Message Sent!",
-        description: "We'll get back to you as soon as possible.",
-      });
+      if (!popup || popup.closed || typeof popup.closed === 'undefined') {
+        toast({
+          title: "Opening WhatsApp...",
+          description: (
+            <div className="space-y-2">
+              <p>If WhatsApp doesn't open automatically, click below:</p>
+              <a 
+                href={whatsappUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary underline font-medium"
+              >
+                Open WhatsApp
+              </a>
+              <p className="text-xs mt-2">Or call us: 07541 786867</p>
+            </div>
+          ),
+          duration: 10000,
+        });
+      } else {
+        toast({
+          title: "Message Sent!",
+          description: "We'll get back to you as soon as possible.",
+        });
+      }
       
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
