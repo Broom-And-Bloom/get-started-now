@@ -259,7 +259,7 @@ const Home = () => {
             <div className="bg-muted/50 p-6 rounded-lg">
               <p className="text-sm text-muted-foreground text-center">
                 <strong>Professional Collaboration:</strong> We work alongside trusted third-party specialists for
-                specialized services. Whilst we coordinate these partnerships, we are not responsible for the services
+                specialised services. Whilst we coordinate these partnerships, we are not responsible for the services
                 provided by external contractors.
               </p>
             </div>
