@@ -218,14 +218,10 @@ const Contact = () => {
 
                 <Card className="bg-accent/20">
                   <CardContent className="pt-6">
-                    <p className="text-sm text-muted-foreground">
-                      Business Hours: Monday - Friday: 8:00 AM - 6:00 PM
-                      <strong>Business Hours:</strong>
-                      <br />
-                      Monday - Friday: 8:00 AM - 6:00 PM
-                      <br />
-                      ​<br />
-                    </p>
+                    <div className="text-sm">
+                      <p className="font-semibold mb-2">Business Hours</p>
+                      <p className="text-muted-foreground">Monday - Friday: 8:00 AM - 6:00 PM</p>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
