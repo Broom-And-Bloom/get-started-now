@@ -72,12 +72,6 @@ const Home = () => {
             <Button asChild size="lg" className="text-lg">
               <Link to="/quote">Get Your Free Quote</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-lg">
-              <a href="https://wa.me/447541786867" target="_blank" rel="noopener noreferrer">
-                <Phone className="mr-2 h-5 w-5" />
-                WhatsApp Us
-              </a>
-            </Button>
           </div>
         </motion.div>
       </section>
