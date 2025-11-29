@@ -8,7 +8,6 @@ import logoImage from "@/assets/BroomAndBloomLogo.jpeg";
 import deepCleanImage from "@/assets/deep-cleaning.jpg";
 import whyChooseImage from "@/assets/cleaning-bathroom.jpg";
 import cindyImage from "@/assets/cindy-founder.png";
-import cindySignature from "@/assets/cindy-signature.png";
 const Home = () => {
   const howItWorks = [{
     icon: Phone,
@@ -119,17 +118,15 @@ Cleaning and Property Services<br />
                   Hoping to see you soon!
                 </p>
                 
-                {/* Signature Image */}
-                <div className="flex justify-start pt-2">
-                  <img 
-                    src={cindySignature} 
-                    alt="Cindy's signature" 
-                    className="h-16 md:h-20 opacity-90"
-                  />
+                {/* Signature */}
+                <div className="flex flex-col items-start pt-2">
+                  <p className="font-signature text-5xl md:text-6xl text-primary">
+                    Cindy
+                  </p>
+                  <p className="text-sm text-muted-foreground italic -mt-2">
+                    Founder
+                  </p>
                 </div>
-                <p className="text-sm text-muted-foreground italic">
-                  Cindy, Founder
-                </p>
               </motion.div>
             </div>
           </div>
