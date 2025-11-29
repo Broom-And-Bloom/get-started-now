@@ -19,12 +19,12 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           <Link to="/" className="flex items-center space-x-3">
-            <img src={logo} alt="Broom & Bloom Logo" className="h-12 w-12 rounded-full" />
+            <img src={logo} alt="Broom & Bloom Logo" className="h-16 w-16 rounded-full" />
             <div className="flex flex-col">
-              <span className="text-lg font-bold text-primary leading-tight">Broom & Bloom</span>
-              <span className="text-xs text-muted-foreground">Cleaning & Property Services</span>
+              <span className="text-xl font-bold text-primary leading-tight">Broom & Bloom</span>
+              <span className="text-sm text-muted-foreground">Cleaning & Property Services</span>
             </div>
           </Link>
 
