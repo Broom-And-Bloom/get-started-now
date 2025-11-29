@@ -165,9 +165,7 @@ Cleaning and Property Services<br />
               once: true
             }}>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Broom & Bloom?</h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  We're more than just a cleaning company. We're your trusted partner for creating healthy, spotless spaces across Leicestershire. Our commitment to excellence, sustainability, and customer satisfaction sets us apart.
-                </p>
+                <p className="text-lg text-muted-foreground mb-6">We're more than just a cleaning company. We're your trusted partner for creating healthy, spotless spaces across Leicestershire. Our commitment to excellence, sustainability, and customer satisfaction sets us apart.</p>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
@@ -183,18 +181,12 @@ Cleaning and Property Services<br />
                       <p className="text-muted-foreground">Comprehensive insurance coverage protects your property.</p>
                     </div>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <Award className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold mb-1">Infection-Control Trained</h4>
-                      <p className="text-muted-foreground">Professional training in hygiene and infection control protocols.</p>
-                    </div>
-                  </li>
+                  
                   <li className="flex items-start gap-3">
                     <Leaf className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                     <div>
-                      <h4 className="font-semibold mb-1">Eco-Friendly Products</h4>
-                      <p className="text-muted-foreground">100% biodegradable products safe for your family, pets, and the environment.</p>
+                      <h4 className="font-semibold mb-1">Eco-Friendly Products *</h4>
+                      <p className="text-muted-foreground">We aim where possible to use eco friendly products in your home.</p>
                     </div>
                   </li>
                 </ul>
@@ -265,9 +257,7 @@ Cleaning and Property Services<br />
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-foreground">
             Ready to Experience the Difference?
           </h2>
-          <p className="text-xl mb-8 text-primary-foreground/90">
-            Get your free, no-obligation quote today and discover why residents across Leicestershire trust Broom & Bloom.
-          </p>
+          <p className="text-xl mb-8 text-primary-foreground/90">Get your free, no-obligation quote today and discover why residents across the Melton Mowbray area trust Broom & Bloom.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" variant="secondary" className="text-lg">
               <Link to="/quote">Get Free Quote</Link>
