@@ -225,7 +225,6 @@ const Contact = () => {
                       Monday - Friday: 8:00 AM - 6:00 PM
                       <br />
                       ​<br />
-                      Sunday: Closed
                     </p>
                   </CardContent>
                 </Card>
