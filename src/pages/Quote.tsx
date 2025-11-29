@@ -17,6 +17,7 @@ const quoteSchema = z.object({
   phone: z.string().trim().min(1, "Phone is required").max(20),
   address: z.string().trim().min(1, "Address is required").max(200),
   propertyType: z.string().min(1, "Property type is required"),
+  rooms: z.string().trim().min(1, "Please list the rooms that need cleaning").max(300),
   services: z.array(z.string()).min(1, "Select at least one service"),
   additionalInfo: z.string().trim().max(500).optional(),
 });
@@ -29,6 +30,7 @@ const Quote = () => {
     phone: "",
     address: "",
     propertyType: "",
+    rooms: "",
     services: [] as string[],
     additionalInfo: ""
   });
@@ -58,6 +60,7 @@ const Quote = () => {
         `Phone: ${validated.phone}\n` +
         `Address: ${validated.address}\n` +
         `Property Type: ${validated.propertyType}\n` +
+        `Rooms: ${validated.rooms}\n` +
         `Services: ${validated.services.join(", ")}\n` +
         `Additional Info: ${validated.additionalInfo || "N/A"}`
       );
@@ -97,6 +100,7 @@ const Quote = () => {
         phone: "",
         address: "",
         propertyType: "",
+        rooms: "",
         services: [],
         additionalInfo: ""
       });
@@ -208,6 +212,19 @@ const Quote = () => {
                         <SelectItem value="commercial">Commercial Space</SelectItem>
                       </SelectContent>
                     </Select>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="rooms">Rooms to be Cleaned *</Label>
+                    <Textarea
+                      id="rooms"
+                      rows={3}
+                      value={formData.rooms}
+                      onChange={(e) => setFormData(prev => ({ ...prev, rooms: e.target.value }))}
+                      placeholder="e.g., 3 bedrooms, 2 bathrooms, kitchen, living room, hallway"
+                      required
+                      maxLength={300}
+                    />
                   </div>
 
                   {/* Services Selection */}
