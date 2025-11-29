@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import logoImage from "@/assets/BroomAndBloomLogo.jpeg";
 import deepCleanImage from "@/assets/deep-cleaning.jpg";
 import whyChooseImage from "@/assets/cleaning-bathroom.jpg";
+import cindyImage from "@/assets/cindy-founder.png";
+import cindySignature from "@/assets/cindy-signature.png";
 const Home = () => {
   const howItWorks = [{
     icon: Phone,
@@ -65,30 +67,70 @@ Cleaning and Property Services<br />
         </motion.div>
       </section>
 
-      {/* About Section */}
-      <section className="py-16 md:py-24">
+      {/* About Us - Personal Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-muted/20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">About Broom & Bloom</h2>
-            <div className="text-lg text-muted-foreground space-y-4">
-              <p>
-                Welcome to Broom & Bloom, your trusted partner for professional cleaning services across the Melton Mowbray area. 
-                We're dedicated to transforming homes and businesses with meticulous care, attention to detail, and a commitment to sustainable practices.
-              </p>
-              <p>
-                Our experienced team takes pride in delivering exceptional results every time. Whether you need regular maintenance cleaning, 
-                a thorough deep clean, or specialized services like end-of-tenancy cleaning, we have the expertise to exceed your expectations.
-              </p>
-              <p>
-                What sets us apart is our dedication to using eco-friendly products wherever possible, ensuring a safe and healthy environment 
-                for your family, pets, and employees. All our staff are DBS-checked, fully insured, and professionally trained to deliver 
-                the highest standards of service.
-              </p>
-            </div>
-            <div className="mt-8">
-              <Button size="lg" asChild>
-                <Link to="/services">Explore Our Services</Link>
-              </Button>
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">About Us</h2>
+            
+            <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-start">
+              {/* Cindy's Photo - Left Side */}
+              <motion.div 
+                initial={{ opacity: 0, x: -20 }} 
+                whileInView={{ opacity: 1, x: 0 }} 
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="md:col-span-2 flex justify-center"
+              >
+                <div className="relative">
+                  <img 
+                    src={cindyImage} 
+                    alt="Cindy, Founder of Broom & Bloom" 
+                    className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-xl border-4 border-primary/20"
+                  />
+                </div>
+              </motion.div>
+              
+              {/* Personal Story - Right Side */}
+              <motion.div 
+                initial={{ opacity: 0, x: 20 }} 
+                whileInView={{ opacity: 1, x: 0 }} 
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="md:col-span-3 space-y-4 text-muted-foreground"
+              >
+                <p>
+                  Hi there and thank you for taking the time to learn more about Broom & Bloom Cleaning and Property Services. I'm Cindy, the founder. I first moved to Burton Lazars 21 years ago after falling in love with Melton and for the past 19 years I've lived in Asfordby with my husband and our son.
+                </p>
+                
+                <p>
+                  Before starting Broom & Bloom, I spent many years in the corporate world. During that time, I tried to find a cleaner for my own home but struggled to find anyone who met the standards I was used to. I grew up with military-level cleaning expectations, though I didn't realise it at the time! Eventually, I decided to take the leap and create a service I could truly be proud of. It's been a steep learning curve, but I absolutely love what I do.
+                </p>
+                
+                <p>
+                  Our family has also grown along the way. We now share our home with three dogs and three cats. So believe me, I know exactly where to look when it comes to muddy paw prints, fur tumbleweeds, and slobbery surprises our furry companions leave behind!
+                </p>
+                
+                <p>
+                  Anyone who joins the Broom & Bloom team must meet those same high standards. Cleaning isn't easy, it's skilled, physical work and I'm proud to say we put genuine care into every home and every task. Wherever possible, we go the extra mile for our clients, because it's the little touches that make the biggest difference.
+                </p>
+                
+                <p className="text-foreground font-medium pt-4">
+                  Hoping to see you soon!
+                </p>
+                
+                {/* Signature Image */}
+                <div className="flex justify-start pt-2">
+                  <img 
+                    src={cindySignature} 
+                    alt="Cindy's signature" 
+                    className="h-16 md:h-20 opacity-90"
+                  />
+                </div>
+                <p className="text-sm text-muted-foreground italic">
+                  Cindy, Founder
+                </p>
+              </motion.div>
             </div>
           </div>
         </div>
