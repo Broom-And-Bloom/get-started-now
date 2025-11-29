@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Leaf } from "lucide-react";
 import logo from "@/assets/BroomAndBloomLogo.jpeg";
 const Footer = () => {
-  return <footer className="bg-primary text-primary-foreground">
+  return (
+    <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
@@ -14,7 +15,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm opacity-90">
-              Professional cleaning services with an eco-friendly touch. Making your space sparkle while caring for our planet.
+              Professional cleaning services with an eco-friendly touch. Making your space sparkle while caring for our
+              planet.
             </p>
           </div>
 
@@ -51,9 +53,9 @@ const Footer = () => {
               <li>Commercial Cleaning</li>
               <li>End of Tenancy</li>
               <li>Deep/One-Off Cleaning</li>
-              <li>Move-In/Move-Out</li>
+              <li>Move-In</li>
               <li>Post-Construction</li>
-              <li>Airbnb/Holiday Let</li>
+              <li>Airbnb</li>
             </ul>
           </div>
 
@@ -88,9 +90,9 @@ const Footer = () => {
               <h4 className="font-semibold text-lg">Eco Promise</h4>
             </div>
             <p className="text-sm opacity-90 leading-relaxed">
-              Where possible, we choose eco-friendly products that are gentle on your home and kinder to the planet. 
-              We prioritise low-impact alternatives, reusable materials, and fragrance-sensitive options — always 
-              aiming for excellent results with a lighter environmental footprint.
+              Where possible, we choose eco-friendly products that are gentle on your home and kinder to the planet. We
+              prioritise low-impact alternatives, reusable materials, and fragrance-sensitive options — always aiming
+              for excellent results with a lighter environmental footprint.
             </p>
           </div>
         </div>
@@ -99,6 +101,7 @@ const Footer = () => {
           <p>&copy; {new Date().getFullYear()} Broom & Bloom. All rights reserved.</p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
 export default Footer;
