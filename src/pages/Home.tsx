@@ -97,7 +97,7 @@ const Home = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden bg-[#3E403C]">
+      <section className="relative h-[600px] flex items-center justify-center overflow-hidden bg-[#2D2E2B]">
         <div 
           className="absolute inset-0 bg-contain bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${logoImage})` }}
