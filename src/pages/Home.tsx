@@ -99,7 +99,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-contain bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${logoImage})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70" />
