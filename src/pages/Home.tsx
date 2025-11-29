@@ -15,7 +15,7 @@ import moveImage from "@/assets/move-in-out.jpg";
 import constructionImage from "@/assets/post-construction.jpg";
 import airbnbImage from "@/assets/airbnb-cleaning.jpg";
 import propertyImage from "@/assets/property-services.jpg";
-import whyChooseImage from "@/assets/clean-home-interior.jpg";
+import whyChooseImage from "@/assets/cleaning-bathroom.jpg";
 
 const Home = () => {
   const services = [
