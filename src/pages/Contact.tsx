@@ -219,7 +219,7 @@ const Contact = () => {
                       <div>
                         <p className="font-medium">Service Area</p>
                         <p className="text-muted-foreground">
-                          Leicestershire & Surrounding Areas
+                          Melton Mowbray & Surrounding Areas
                         </p>
                       </div>
                     </div>
