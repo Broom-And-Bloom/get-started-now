@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Leaf } from "lucide-react";
 import logo from "@/assets/BroomAndBloomLogo.jpeg";
 const Footer = () => {
   return <footer className="bg-primary text-primary-foreground">
@@ -77,6 +77,21 @@ const Footer = () => {
                 <span className="opacity-90">Serving Melton Mowbray & Surrounding Areas</span>
               </li>
             </ul>
+          </div>
+        </div>
+
+        {/* Eco Promise Section */}
+        <div className="border-t border-primary-foreground/20 mt-8 pt-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <Leaf className="h-5 w-5" />
+              <h4 className="font-semibold text-lg">Eco Promise</h4>
+            </div>
+            <p className="text-sm opacity-90 leading-relaxed">
+              Where possible, we choose eco-friendly products that are gentle on your home and kinder to the planet. 
+              We prioritise low-impact alternatives, reusable materials, and fragrance-sensitive options — always 
+              aiming for excellent results with a lighter environmental footprint.
+            </p>
           </div>
         </div>
 
