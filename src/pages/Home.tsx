@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { Sparkles, Home as HomeIcon, Building2, Key, CheckCircle2, Phone, Calendar, ThumbsUp, Leaf, Briefcase, ShoppingBag, Users, Shield, Award } from "lucide-react";
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-cleaning.jpg";
+import logoImage from "@/assets/BroomAndBloomLogo.jpeg";
 import domesticImage from "@/assets/domestic-cleaning.jpg";
 import commercialImage from "@/assets/commercial-cleaning.jpg";
 import tenancyImage from "@/assets/end-of-tenancy.jpg";
@@ -99,7 +100,7 @@ const Home = () => {
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          style={{ backgroundImage: `url(${logoImage})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70" />
         </div>
