@@ -49,7 +49,7 @@ Cleaning and Property Services<br />
             
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-foreground/80">
-            Professional, eco-friendly cleaning services across Leicestershire. Transforming homes and businesses with meticulous care and sustainable practices.
+            Professional, eco-friendly cleaning services across the Melton Mowbray area. Transforming homes and businesses with meticulous care and sustainable practices.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <Button asChild size="lg" className="text-lg">
@@ -72,7 +72,7 @@ Cleaning and Property Services<br />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">About Broom & Bloom</h2>
             <div className="text-lg text-muted-foreground space-y-4">
               <p>
-                Welcome to Broom & Bloom, your trusted partner for professional cleaning services across Leicestershire. 
+                Welcome to Broom & Bloom, your trusted partner for professional cleaning services across the Melton Mowbray area. 
                 We're dedicated to transforming homes and businesses with meticulous care, attention to detail, and a commitment to sustainable practices.
               </p>
               <p>
@@ -111,7 +111,7 @@ Cleaning and Property Services<br />
               once: true
             }}>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Broom & Bloom?</h2>
-                <p className="text-lg text-muted-foreground mb-6">We're more than just a cleaning company. We're your trusted partner for creating healthy, spotless spaces across Leicestershire. Our commitment to excellence, sustainability, and customer satisfaction sets us apart.</p>
+                <p className="text-lg text-muted-foreground mb-6">We're more than just a cleaning company. We're your trusted partner for creating healthy, spotless spaces across the Melton Mowbray area. Our commitment to excellence, sustainability, and customer satisfaction sets us apart.</p>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />

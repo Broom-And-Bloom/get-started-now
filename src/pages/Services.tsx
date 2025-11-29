@@ -91,7 +91,7 @@ const Services = () => {
     },
     {
       question: "What areas do you serve?",
-      answer: "We proudly serve Leicestershire and surrounding areas. Contact us to confirm if we cover your specific location."
+      answer: "We proudly serve the Melton Mowbray area and surrounding locations. Contact us to confirm if we cover your specific location."
     }
   ];
 

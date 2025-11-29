@@ -54,7 +54,6 @@ const Footer = () => {
               <li>Move-In/Move-Out</li>
               <li>Post-Construction</li>
               <li>Airbnb/Holiday Let</li>
-              <li>Property Services</li>
             </ul>
           </div>
 
@@ -75,7 +74,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-1" />
-                <span className="opacity-90">Serving Leicestershire & Surrounding Areas</span>
+                <span className="opacity-90">Serving Melton Mowbray & Surrounding Areas</span>
               </li>
             </ul>
           </div>
