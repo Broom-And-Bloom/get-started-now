@@ -149,7 +149,7 @@ const Services = () => {
               </Badge>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">Our Services</h1>
               <p className="text-lg md:text-xl text-foreground/80 mb-8">
-                Comprehensive cleaning solutions tailored to your needs. From regular maintenance to specialized deep
+                Comprehensive cleaning solutions tailored to your needs. From regular maintenance to specialised deep
                 cleans.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
