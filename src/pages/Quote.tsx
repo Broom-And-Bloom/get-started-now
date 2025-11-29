@@ -137,7 +137,7 @@ const Quote = () => {
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Get Your Free Quote</h1>
               <p className="text-lg text-muted-foreground">
-                Tell us about your cleaning needs and we'll provide a personalized quote within 24 hours.
+                Tell us about your cleaning needs and we'll arrange a free visit to your property to provide an accurate, no-obligation quote.
               </p>
             </div>
 

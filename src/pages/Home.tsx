@@ -73,22 +73,22 @@ const Home = () => {
     {
       icon: Phone,
       title: "Get in Touch",
-      description: "Contact us via phone, WhatsApp, or our quote form"
+      description: "Contact us via phone, WhatsApp, or our quote form to discuss your needs"
+    },
+    {
+      icon: HomeIcon,
+      title: "Free Property Visit",
+      description: "We'll visit your property to assess the job and provide an accurate quote"
     },
     {
       icon: Calendar,
-      title: "Schedule Service",
-      description: "Choose a time that works best for your schedule"
+      title: "Book Your Clean",
+      description: "Once you're happy with the quote, we'll schedule a convenient time"
     },
     {
       icon: Sparkles,
-      title: "We Clean",
-      description: "Our professional team arrives and delivers exceptional results"
-    },
-    {
-      icon: ThumbsUp,
       title: "Enjoy Your Space",
-      description: "Relax in your spotless, fresh-smelling environment"
+      description: "Our professional team delivers exceptional results every time"
     }
   ];
 
