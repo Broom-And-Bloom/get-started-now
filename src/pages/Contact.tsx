@@ -13,17 +13,15 @@ const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
   email: z.string().trim().email("Invalid email address").max(255),
   phone: z.string().trim().min(1, "Phone is required").max(20),
-  message: z.string().trim().min(1, "Message is required").max(1000)
+  message: z.string().trim().min(1, "Message is required").max(1000),
 });
 const Contact = () => {
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
@@ -33,41 +31,50 @@ const Contact = () => {
       const validated = contactSchema.parse(formData);
 
       // Encode data for WhatsApp
-      const whatsappMessage = encodeURIComponent(`New Contact Form Submission:\n\nName: ${validated.name}\nEmail: ${validated.email}\nPhone: ${validated.phone}\nMessage: ${validated.message}`);
+      const whatsappMessage = encodeURIComponent(
+        `New Contact Form Submission:\n\nName: ${validated.name}\nEmail: ${validated.email}\nPhone: ${validated.phone}\nMessage: ${validated.message}`,
+      );
 
       // Open WhatsApp
       const whatsappUrl = `https://wa.me/447541786867?text=${whatsappMessage}`;
-      const popup = window.open(whatsappUrl, '_blank');
-      if (!popup || popup.closed || typeof popup.closed === 'undefined') {
+      const popup = window.open(whatsappUrl, "_blank");
+      if (!popup || popup.closed || typeof popup.closed === "undefined") {
         toast({
           title: "Opening WhatsApp...",
-          description: <div className="space-y-2">
+          description: (
+            <div className="space-y-2">
               <p>If WhatsApp doesn't open automatically, click below:</p>
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-primary underline font-medium">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline font-medium"
+              >
                 Open WhatsApp
               </a>
               <p className="text-xs mt-2">Or call us: 07541 786867</p>
-            </div>,
-          duration: 10000
+            </div>
+          ),
+          duration: 10000,
         });
       } else {
         toast({
           title: "Message Sent!",
-          description: "We'll get back to you as soon as possible."
+          description: "We'll get back to you as soon as possible.",
         });
       }
       setFormData({
         name: "",
         email: "",
         phone: "",
-        message: ""
+        message: "",
       });
     } catch (error) {
       if (error instanceof z.ZodError) {
         toast({
           title: "Validation Error",
           description: error.errors[0].message,
-          variant: "destructive"
+          variant: "destructive",
         });
       }
     } finally {
@@ -75,12 +82,13 @@ const Contact = () => {
     }
   };
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     }));
   };
-  return <div className="min-h-screen flex flex-col">
+  return (
+    <div className="min-h-screen flex flex-col">
       <Header />
 
       <section className="py-16 md:py-24">
@@ -104,19 +112,50 @@ const Contact = () => {
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                       <Label htmlFor="name">Name *</Label>
-                      <Input id="name" name="name" value={formData.name} onChange={handleChange} required maxLength={100} />
+                      <Input
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        maxLength={100}
+                      />
                     </div>
                     <div>
                       <Label htmlFor="email">Email *</Label>
-                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required maxLength={255} />
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        maxLength={255}
+                      />
                     </div>
                     <div>
                       <Label htmlFor="phone">Phone *</Label>
-                      <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} required maxLength={20} />
+                      <Input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        required
+                        maxLength={20}
+                      />
                     </div>
                     <div>
                       <Label htmlFor="message">Message *</Label>
-                      <Textarea id="message" name="message" rows={5} value={formData.message} onChange={handleChange} required maxLength={1000} />
+                      <Textarea
+                        id="message"
+                        name="message"
+                        rows={5}
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        maxLength={1000}
+                      />
                     </div>
                     <Button type="submit" className="w-full" disabled={isSubmitting}>
                       {isSubmitting ? "Sending..." : "Send Message"}
@@ -163,7 +202,7 @@ const Contact = () => {
                       <div>
                         <p className="font-medium">Email</p>
                         <a href="mailto:info@broomandbloom.co.uk" className="text-muted-foreground hover:text-primary">
-                          info@broomandbloom.co.uk
+                          hello@broomandbloom.co.uk
                         </a>
                       </div>
                     </div>
@@ -171,9 +210,7 @@ const Contact = () => {
                       <MapPin className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <p className="font-medium">Service Area</p>
-                        <p className="text-muted-foreground">
-                          Melton Mowbray & Surrounding Areas
-                        </p>
+                        <p className="text-muted-foreground">Melton Mowbray & Surrounding Areas</p>
                       </div>
                     </div>
                   </CardContent>
@@ -181,9 +218,12 @@ const Contact = () => {
 
                 <Card className="bg-accent/20">
                   <CardContent className="pt-6">
-                    <p className="text-sm text-muted-foreground">Business Hours: Monday - Friday: 8:00 AM - 6:00 PM
-                    <strong>Business Hours:</strong><br />
-                      Monday - Friday: 8:00 AM - 6:00 PM<br />
+                    <p className="text-sm text-muted-foreground">
+                      Business Hours: Monday - Friday: 8:00 AM - 6:00 PM
+                      <strong>Business Hours:</strong>
+                      <br />
+                      Monday - Friday: 8:00 AM - 6:00 PM
+                      <br />
                       ​<br />
                       Sunday: Closed
                     </p>
@@ -196,6 +236,7 @@ const Contact = () => {
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
 export default Contact;
