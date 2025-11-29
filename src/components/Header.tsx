@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/BroomAndBloomLogo.jpeg";
 
@@ -44,12 +44,6 @@ const Header = () => {
             <Button asChild>
               <Link to="/quote">Get a Quote</Link>
             </Button>
-            <Button variant="outline" asChild>
-              <a href="https://wa.me/447541786867" target="_blank" rel="noopener noreferrer">
-                <Phone className="h-4 w-4 mr-2" />
-                WhatsApp
-              </a>
-            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -81,12 +75,6 @@ const Header = () => {
               <Link to="/quote" onClick={() => setIsMenuOpen(false)}>
                 Get a Quote
               </Link>
-            </Button>
-            <Button variant="outline" asChild className="w-full">
-              <a href="https://wa.me/447541786867" target="_blank" rel="noopener noreferrer">
-                <Phone className="h-4 w-4 mr-2" />
-                WhatsApp
-              </a>
             </Button>
           </nav>
         )}
