@@ -16,103 +16,87 @@ import constructionImage from "@/assets/post-construction.jpg";
 import airbnbImage from "@/assets/airbnb-cleaning.jpg";
 import propertyImage from "@/assets/property-services.jpg";
 import whyChooseImage from "@/assets/cleaning-bathroom.jpg";
-
 const Home = () => {
-  const services = [
-    {
-      icon: HomeIcon,
-      title: "Domestic Cleaning",
-      description: "Regular home cleaning services tailored to your household needs and schedule.",
-      image: domesticImage,
-    },
-    {
-      icon: Building2,
-      title: "Commercial Cleaning",
-      description: "Professional office and business premises cleaning for a spotless workspace.",
-      image: commercialImage,
-    },
-    {
-      icon: Key,
-      title: "End of Tenancy Cleaning",
-      description: "Comprehensive cleaning with deposit-back guarantee for tenants and landlords.",
-      image: tenancyImage,
-    },
-    {
-      icon: Sparkles,
-      title: "Deep/One-Off Cleaning",
-      description: "Thorough single-session cleaning for spring cleans or special occasions.",
-      image: deepCleanImage,
-    },
-    {
-      icon: Users,
-      title: "Move-In/Move-Out Cleaning",
-      description: "Preparing properties for new occupants with complete turnover cleaning.",
-      image: moveImage,
-    },
-    {
-      icon: Briefcase,
-      title: "Post-Construction Cleaning",
-      description: "Removing dust and debris after builders, renovation, or construction work.",
-      image: constructionImage,
-    },
-    {
-      icon: ShoppingBag,
-      title: "Airbnb/Holiday Let Cleaning",
-      description: "Quick turnaround cleaning between guests to maintain 5-star standards.",
-      image: airbnbImage,
-    },
-    {
-      icon: Building2,
-      title: "Property Services",
-      description: "Property management support including maintenance coordination and inspections.",
-      image: propertyImage,
-    }
-  ];
-
-  const howItWorks = [
-    {
-      icon: Phone,
-      title: "Get in Touch",
-      description: "Contact us via phone, WhatsApp, or our quote form to discuss your needs"
-    },
-    {
-      icon: HomeIcon,
-      title: "Free Property Visit",
-      description: "We'll visit your property to assess the job and provide an accurate quote"
-    },
-    {
-      icon: Calendar,
-      title: "Book Your Clean",
-      description: "Once you're happy with the quote, we'll schedule a convenient time"
-    },
-    {
-      icon: Sparkles,
-      title: "Enjoy Your Space",
-      description: "Our professional team delivers exceptional results every time"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  const services = [{
+    icon: HomeIcon,
+    title: "Domestic Cleaning",
+    description: "Regular home cleaning services tailored to your household needs and schedule.",
+    image: domesticImage
+  }, {
+    icon: Building2,
+    title: "Commercial Cleaning",
+    description: "Professional office and business premises cleaning for a spotless workspace.",
+    image: commercialImage
+  }, {
+    icon: Key,
+    title: "End of Tenancy Cleaning",
+    description: "Comprehensive cleaning with deposit-back guarantee for tenants and landlords.",
+    image: tenancyImage
+  }, {
+    icon: Sparkles,
+    title: "Deep/One-Off Cleaning",
+    description: "Thorough single-session cleaning for spring cleans or special occasions.",
+    image: deepCleanImage
+  }, {
+    icon: Users,
+    title: "Move-In/Move-Out Cleaning",
+    description: "Preparing properties for new occupants with complete turnover cleaning.",
+    image: moveImage
+  }, {
+    icon: Briefcase,
+    title: "Post-Construction Cleaning",
+    description: "Removing dust and debris after builders, renovation, or construction work.",
+    image: constructionImage
+  }, {
+    icon: ShoppingBag,
+    title: "Airbnb/Holiday Let Cleaning",
+    description: "Quick turnaround cleaning between guests to maintain 5-star standards.",
+    image: airbnbImage
+  }, {
+    icon: Building2,
+    title: "Property Services",
+    description: "Property management support including maintenance coordination and inspections.",
+    image: propertyImage
+  }];
+  const howItWorks = [{
+    icon: Phone,
+    title: "Get in Touch",
+    description: "Contact us via phone, WhatsApp, or our quote form to discuss your needs"
+  }, {
+    icon: HomeIcon,
+    title: "Free Property Visit",
+    description: "We'll visit your property to assess the job and provide an accurate quote"
+  }, {
+    icon: Calendar,
+    title: "Book Your Clean",
+    description: "Once you're happy with the quote, we'll schedule a convenient time"
+  }, {
+    icon: Sparkles,
+    title: "Enjoy Your Space",
+    description: "Our professional team delivers exceptional results every time"
+  }];
+  return <div className="min-h-screen flex flex-col">
       <Header />
 
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden bg-[#2D2E2B]">
-        <div 
-          className="absolute inset-0 bg-contain bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${logoImage})` }}
-        >
+        <div className="absolute inset-0 bg-contain bg-center bg-no-repeat" style={{
+        backgroundImage: `url(${logoImage})`
+      }}>
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70" />
         </div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="relative z-10 max-w-4xl mx-auto px-4 text-center md:text-left"
-        >
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
-            Broom & Bloom<br />
-            <span className="text-primary">Cleaning & Property Services</span>
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.6
+      }} className="relative z-10 max-w-4xl mx-auto px-4 text-center md:text-left">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">Broom & Bloom
+Cleaning and Property Services<br />
+            
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-foreground/80">
             Professional, eco-friendly cleaning services across Leicestershire. Transforming homes and businesses with meticulous care and sustainable practices.
@@ -141,17 +125,20 @@ const Home = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-              >
+            {services.map((service, index) => <motion.div key={index} initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            delay: index * 0.1,
+            duration: 0.5
+          }}>
                 <ServiceCard {...service} image={service.image} />
-              </motion.div>
-            ))}
+              </motion.div>)}
           </div>
           <div className="text-center mt-8">
             <Button variant="outline" size="lg" asChild>
@@ -166,12 +153,17 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
+              <motion.div initial={{
+              opacity: 0,
+              x: -20
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.6
+            }} viewport={{
+              once: true
+            }}>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Broom & Bloom?</h2>
                 <p className="text-lg text-muted-foreground mb-6">
                   We're more than just a cleaning company. We're your trusted partner for creating healthy, spotless spaces across Leicestershire. Our commitment to excellence, sustainability, and customer satisfaction sets us apart.
@@ -208,18 +200,18 @@ const Home = () => {
                 </ul>
               </motion.div>
               
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="relative h-[500px] rounded-lg overflow-hidden shadow-xl"
-              >
-                <img 
-                  src={whyChooseImage} 
-                  alt="Professional cleaning supplies and tools" 
-                  className="w-full h-full object-cover"
-                />
+              <motion.div initial={{
+              opacity: 0,
+              x: 20
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.6
+            }} viewport={{
+              once: true
+            }} className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
+                <img src={whyChooseImage} alt="Professional cleaning supplies and tools" className="w-full h-full object-cover" />
               </motion.div>
             </div>
             
@@ -240,35 +232,36 @@ const Home = () => {
             <p className="text-lg text-muted-foreground">Simple, straightforward, and stress-free</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {howItWorks.map((step, index) => (
-              <div key={index} className="text-center">
+            {howItWorks.map((step, index) => <div key={index} className="text-center">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <step.icon className="h-8 w-8 text-primary" />
                 </div>
                 <div className="text-2xl font-bold text-primary mb-2">{index + 1}</div>
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                 <p className="text-muted-foreground">{step.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${deepCleanImage})` }}
-        >
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: `url(${deepCleanImage})`
+      }}>
           <div className="absolute inset-0 bg-primary/90" />
         </div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="relative z-10 max-w-4xl mx-auto text-center"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.6
+      }} viewport={{
+        once: true
+      }} className="relative z-10 max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-foreground">
             Ready to Experience the Difference?
           </h2>
@@ -287,8 +280,6 @@ const Home = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
