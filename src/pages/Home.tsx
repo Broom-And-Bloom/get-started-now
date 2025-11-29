@@ -9,62 +9,48 @@ import deepCleanImage from "@/assets/deep-cleaning.jpg";
 import whyChooseImage from "@/assets/cleaning-bathroom.jpg";
 import cindyImage from "@/assets/cindy-founder.png";
 const Home = () => {
-  const howItWorks = [
-    {
-      icon: Phone,
-      title: "Get in Touch",
-      description: "Contact us via phone, WhatsApp, or our quote form to discuss your needs",
-    },
-    {
-      icon: Sparkles,
-      title: "Free Property Visit",
-      description: "We will visit your property to assess the job and provide an accurate quote",
-    },
-    {
-      icon: Calendar,
-      title: "Book Your Clean",
-      description: "Once you're happy with the quote, we will schedule a convenient time",
-    },
-    {
-      icon: CheckCircle2,
-      title: "Enjoy Your Space",
-      description: "Our professional team delivers exceptional results every time",
-    },
-  ];
-  return (
-    <div className="min-h-screen flex flex-col">
+  const howItWorks = [{
+    icon: Phone,
+    title: "Get in Touch",
+    description: "Contact us via phone, WhatsApp, or our quote form to discuss your needs"
+  }, {
+    icon: Sparkles,
+    title: "Free Property Visit",
+    description: "We will visit your property to assess the job and provide an accurate quote"
+  }, {
+    icon: Calendar,
+    title: "Book Your Clean",
+    description: "Once you're happy with the quote, we will schedule a convenient time"
+  }, {
+    icon: CheckCircle2,
+    title: "Enjoy Your Space",
+    description: "Our professional team delivers exceptional results every time"
+  }];
+  return <div className="min-h-screen flex flex-col">
       <Header />
 
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden bg-[#2D2E2B]">
-        <div
-          className="absolute inset-0 bg-contain bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url(${logoImage})`,
-          }}
-        >
+        <div className="absolute inset-0 bg-contain bg-center bg-no-repeat" style={{
+        backgroundImage: `url(${logoImage})`
+      }}>
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70" />
         </div>
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
-          className="relative z-10 max-w-4xl mx-auto px-4 text-center md:text-left"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.6
+      }} className="relative z-10 max-w-4xl mx-auto px-4 text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground leading-tight">
             Broom & Bloom
             <br />
             <span className="text-3xl md:text-5xl">Cleaning and Property Services</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-foreground/80">
+          <p className="text-xl mb-8 text-foreground/80 md:text-xl">
             Professional, eco-friendly cleaning services across the Melton Mowbray area. Transforming homes and
             businesses with meticulous care and sustainable practices.
           </p>
@@ -90,30 +76,34 @@ const Home = () => {
 
             <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-start">
               {/* Cindy's Photo - Left Side */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="md:col-span-2 flex justify-center"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              x: -20
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.6
+            }} viewport={{
+              once: true
+            }} className="md:col-span-2 flex justify-center">
                 <div className="relative">
-                  <img
-                    src={cindyImage}
-                    alt="Cindy, Founder of Broom & Bloom"
-                    className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-xl border-4 border-primary/20"
-                  />
+                  <img src={cindyImage} alt="Cindy, Founder of Broom & Bloom" className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-xl border-4 border-primary/20" />
                 </div>
               </motion.div>
 
               {/* Personal Story - Right Side */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="md:col-span-3 space-y-4 text-muted-foreground"
-              >
+              <motion.div initial={{
+              opacity: 0,
+              x: 20
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.6
+            }} viewport={{
+              once: true
+            }} className="md:col-span-3 space-y-4 text-muted-foreground">
                 <p>
                   Hi there and thank you for taking the time to learn more about Broom & Bloom Cleaning and Property
                   Services. I'm Cindy, the founder. I first moved to Burton Lazars 21 years ago after falling in love
@@ -159,22 +149,17 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  x: -20,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                }}
-                transition={{
-                  duration: 0.6,
-                }}
-                viewport={{
-                  once: true,
-                }}
-              >
+              <motion.div initial={{
+              opacity: 0,
+              x: -20
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.6
+            }} viewport={{
+              once: true
+            }}>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Broom & Bloom?</h2>
                 <p className="text-lg text-muted-foreground mb-6">
                   We're more than just a cleaning company. We're your trusted partner for creating healthy, spotless
@@ -211,28 +196,18 @@ const Home = () => {
                 </ul>
               </motion.div>
 
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  x: 20,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                }}
-                transition={{
-                  duration: 0.6,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                className="relative h-[500px] rounded-lg overflow-hidden shadow-xl"
-              >
-                <img
-                  src={whyChooseImage}
-                  alt="Professional cleaning supplies and tools"
-                  className="w-full h-full object-cover"
-                />
+              <motion.div initial={{
+              opacity: 0,
+              x: 20
+            }} whileInView={{
+              opacity: 1,
+              x: 0
+            }} transition={{
+              duration: 0.6
+            }} viewport={{
+              once: true
+            }} className="relative h-[500px] rounded-lg overflow-hidden shadow-xl">
+                <img src={whyChooseImage} alt="Professional cleaning supplies and tools" className="w-full h-full object-cover" />
               </motion.div>
             </div>
 
@@ -255,47 +230,36 @@ const Home = () => {
             <p className="text-lg text-muted-foreground">Simple, straightforward, and stress-free</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {howItWorks.map((step, index) => (
-              <div key={index} className="text-center">
+            {howItWorks.map((step, index) => <div key={index} className="text-center">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <step.icon className="h-8 w-8 text-primary" />
                 </div>
                 <div className="text-2xl font-bold text-primary mb-2">{index + 1}</div>
                 <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
                 <p className="text-muted-foreground">{step.description}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${deepCleanImage})`,
-          }}
-        >
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: `url(${deepCleanImage})`
+      }}>
           <div className="absolute inset-0 bg-primary/90" />
         </div>
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
-          viewport={{
-            once: true,
-          }}
-          className="relative z-10 max-w-4xl mx-auto text-center"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.6
+      }} viewport={{
+        once: true
+      }} className="relative z-10 max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-foreground">
             Ready to Experience the Difference?
           </h2>
@@ -307,12 +271,7 @@ const Home = () => {
             <Button asChild size="lg" variant="secondary" className="text-lg">
               <Link to="/quote">Get Free Quote</Link>
             </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="text-lg bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-            >
+            <Button asChild size="lg" variant="outline" className="text-lg bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
@@ -320,7 +279,6 @@ const Home = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
 export default Home;
