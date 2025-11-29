@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/BroomAndBloomLogo.jpeg";
 
 const Footer = () => {
   return (
@@ -7,7 +8,13 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Broom & Bloom</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img src={logo} alt="Broom & Bloom Logo" className="h-12 w-12 rounded-full" />
+              <div>
+                <h3 className="text-lg font-bold leading-tight">Broom & Bloom</h3>
+                <p className="text-xs opacity-80">Cleaning & Property Services</p>
+              </div>
+            </div>
             <p className="text-sm opacity-90">
               Professional cleaning services with an eco-friendly touch. Making your space sparkle while caring for our planet.
             </p>
@@ -42,13 +49,14 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-sm opacity-90">
-              <li>Regular Cleaning</li>
-              <li>Deep Cleaning</li>
+              <li>Domestic Cleaning</li>
+              <li>Commercial Cleaning</li>
               <li>End of Tenancy</li>
-              <li>After Builders</li>
-              <li>Carpet Cleaning</li>
-              <li>Window Cleaning</li>
-              <li>Property Management</li>
+              <li>Deep/One-Off Cleaning</li>
+              <li>Move-In/Move-Out</li>
+              <li>Post-Construction</li>
+              <li>Airbnb/Holiday Let</li>
+              <li>Property Services</li>
             </ul>
           </div>
 
@@ -69,7 +77,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-1" />
-                <span className="opacity-90">Serving London & Surrounding Areas</span>
+                <span className="opacity-90">Serving Leicestershire & Surrounding Areas</span>
               </li>
             </ul>
           </div>

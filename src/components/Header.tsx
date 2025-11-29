@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/BroomAndBloomLogo.jpeg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,8 +20,12 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-primary">Broom & Bloom</div>
+          <Link to="/" className="flex items-center space-x-3">
+            <img src={logo} alt="Broom & Bloom Logo" className="h-12 w-12 rounded-full" />
+            <div className="flex flex-col">
+              <span className="text-lg font-bold text-primary leading-tight">Broom & Bloom</span>
+              <span className="text-xs text-muted-foreground">Cleaning & Property Services</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

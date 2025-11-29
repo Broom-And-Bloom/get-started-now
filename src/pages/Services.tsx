@@ -4,57 +4,57 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Sparkles, Home as HomeIcon, Building2, Hammer, Wind, Droplet, Key, CheckCircle2 } from "lucide-react";
+import { Sparkles, Home as HomeIcon, Building2, Key, CheckCircle2, Briefcase, ShoppingBag, Users } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      icon: Sparkles,
-      title: "Regular Cleaning",
-      description: "Weekly or bi-weekly visits to maintain a consistently clean and fresh home. We handle dusting, vacuuming, mopping, and sanitizing all living spaces.",
-      features: ["Customizable schedule", "Consistent team", "Eco-friendly products", "Satisfaction guaranteed"]
-    },
-    {
       icon: HomeIcon,
-      title: "Deep Cleaning",
-      description: "Comprehensive top-to-bottom cleaning that reaches every corner. Perfect for seasonal refreshes or preparing for special events.",
-      features: ["Behind appliances", "Inside cabinets", "Baseboards and moldings", "Light fixtures and ceiling fans"]
-    },
-    {
-      icon: Key,
-      title: "End of Tenancy Cleaning",
-      description: "Professional cleaning to meet landlord standards and maximize your deposit return. Comprehensive checklist included.",
-      features: ["Deposit-back guarantee", "Full property coverage", "Professional equipment", "Certified cleaning team"]
-    },
-    {
-      icon: Hammer,
-      title: "After Builders Cleaning",
-      description: "Remove construction dust, debris, and residue after renovation work. Restore your space to move-in condition.",
-      features: ["Dust removal", "Paint splash cleanup", "Window and frame cleaning", "Floor polishing"]
-    },
-    {
-      icon: Wind,
-      title: "Carpet Cleaning",
-      description: "Professional steam cleaning and stain removal to refresh and sanitize your carpets, removing allergens and odors.",
-      features: ["Deep steam cleaning", "Stain treatment", "Pet odor removal", "Fast drying"]
-    },
-    {
-      icon: Droplet,
-      title: "Window Cleaning",
-      description: "Crystal-clear windows inside and out, including frames and sills. Available for residential and commercial properties.",
-      features: ["Interior and exterior", "Frame and sill cleaning", "Streak-free finish", "Safety certified"]
+      title: "Domestic Cleaning",
+      description: "Regular home cleaning services designed to maintain a consistently fresh and tidy living environment. Customizable schedules to fit your lifestyle.",
+      features: ["Weekly or bi-weekly visits", "Consistent professional team", "Eco-friendly products", "Tailored cleaning plans"]
     },
     {
       icon: Building2,
       title: "Commercial Cleaning",
-      description: "Maintain a professional environment with our reliable office and commercial space cleaning services.",
-      features: ["Flexible scheduling", "After-hours service", "Industry-certified", "Custom cleaning plans"]
+      description: "Keep your business premises spotless and professional. Flexible scheduling including after-hours service to minimize disruption.",
+      features: ["Office cleaning", "Retail space maintenance", "After-hours available", "Industry-certified staff"]
+    },
+    {
+      icon: Key,
+      title: "End of Tenancy Cleaning",
+      description: "Comprehensive deep clean meeting landlord and letting agent standards. Our deposit-back guarantee ensures peace of mind.",
+      features: ["Deposit-back guarantee", "Full property checklist", "Professional equipment", "Certified cleaning team"]
+    },
+    {
+      icon: Sparkles,
+      title: "Deep/One-Off Cleaning",
+      description: "Thorough single-session cleaning perfect for spring cleans, special occasions, or when your property needs extra attention.",
+      features: ["Top-to-bottom cleaning", "Behind appliances", "Inside cabinets", "Baseboards and fixtures"]
+    },
+    {
+      icon: Users,
+      title: "Move-In/Move-Out Cleaning",
+      description: "Preparing properties for new occupants with complete turnover cleaning. Making transitions smooth for tenants and landlords.",
+      features: ["Full property preparation", "Kitchen deep clean", "Bathroom sanitization", "Floor and surface cleaning"]
+    },
+    {
+      icon: Briefcase,
+      title: "Post-Construction Cleaning",
+      description: "Specialized cleaning after building work, renovation, or refurbishment. Removing dust, debris, and residue to restore your space.",
+      features: ["Construction dust removal", "Paint splash cleanup", "Window and frame cleaning", "Floor polishing and sealing"]
+    },
+    {
+      icon: ShoppingBag,
+      title: "Airbnb/Holiday Let Cleaning",
+      description: "Fast turnaround cleaning between guests to maintain your property's 5-star rating. Reliable service you can count on.",
+      features: ["Quick turnaround", "Linen changes", "Welcome presentation", "Quality inspection"]
     },
     {
       icon: Building2,
-      title: "Property Management Services",
-      description: "Comprehensive property care including cleaning coordination, maintenance scheduling, and quality inspections.",
-      features: ["Regular inspections", "Maintenance coordination", "Tenant turnover cleaning", "Emergency response"]
+      title: "Property Services",
+      description: "Comprehensive property management support including maintenance coordination, regular inspections, and contractor liaison.",
+      features: ["Maintenance coordination", "Regular property inspections", "Contractor liaison", "Quality assurance"]
     }
   ];
 
@@ -81,7 +81,7 @@ const Services = () => {
     },
     {
       question: "What areas do you serve?",
-      answer: "We serve London and surrounding areas. Contact us to confirm if we cover your specific location."
+      answer: "We proudly serve Leicestershire and surrounding areas. Contact us to confirm if we cover your specific location."
     }
   ];
 
