@@ -50,7 +50,7 @@ const Services = () => {
       title: "Commercial Cleaning",
       description:
         "Keep your business premises spotless and professional. Flexible scheduling including after-hours service to minimize disruption.",
-      features: ["Office cleaning", "Retail space maintenance", "After-hours available", "Industry-certified staff"],
+      features: ["Office cleaning", "Retail space maintenance", "Industry-certified staff"],
       image: commercialImage,
     },
     {
