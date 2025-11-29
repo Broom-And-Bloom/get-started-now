@@ -6,7 +6,21 @@ import ServiceCard from "@/components/ServiceCard";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
-import { Sparkles, Home as HomeIcon, Building2, Key, CheckCircle2, Briefcase, ShoppingBag, Users, ArrowRight, Clock, Shield, Star, HelpCircle } from "lucide-react";
+import {
+  Sparkles,
+  Home as HomeIcon,
+  Building2,
+  Key,
+  CheckCircle2,
+  Briefcase,
+  ShoppingBag,
+  Users,
+  ArrowRight,
+  Clock,
+  Shield,
+  Star,
+  HelpCircle,
+} from "lucide-react";
 import heroImage from "@/assets/hero-cleaning.jpg";
 import domesticImage from "@/assets/domestic-cleaning.jpg";
 import commercialImage from "@/assets/commercial-cleaning.jpg";
@@ -118,7 +132,7 @@ const Services = () => {
     },
   ];
   const scrollToServices = () => {
-    document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("services-section")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -137,11 +151,7 @@ const Services = () => {
         </div>
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <Badge variant="secondary" className="mb-4 text-sm px-4 py-2">
                 <Sparkles className="w-4 h-4 mr-2 inline" />
                 {services.length} Professional Services
@@ -182,14 +192,14 @@ const Services = () => {
               >
                 <div className={index % 2 === 1 ? "md:order-2" : ""}>
                   <div className="relative group h-64 md:h-80 rounded-lg overflow-hidden shadow-xl">
-                    <img 
-                      src={service.image} 
-                      alt={service.title} 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-primary/90 backdrop-blur-sm flex items-center justify-center text-primary-foreground font-bold text-lg">
-                      {String(index + 1).padStart(2, '0')}
+                      {String(index + 1).padStart(2, "0")}
                     </div>
                   </div>
                 </div>
@@ -203,13 +213,13 @@ const Services = () => {
                   <p className="text-muted-foreground mb-6 text-base leading-relaxed">{service.description}</p>
                   <div className="grid sm:grid-cols-2 gap-3 mb-6">
                     {service.features.map((feature, idx) => (
-                      <motion.div 
-                        key={idx} 
+                      <motion.div
+                        key={idx}
                         className="flex items-start gap-2"
                         initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.3 + (idx * 0.1) }}
+                        transition={{ delay: 0.3 + idx * 0.1 }}
                       >
                         <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                         <span className="text-sm text-foreground/90">{feature}</span>
@@ -250,7 +260,7 @@ const Services = () => {
                   </div>
                   <div className="text-left">
                     <div className="font-bold">Fast Response</div>
-                    <div className="text-sm text-muted-foreground">Same-day quotes</div>
+                    <div className="text-sm text-muted-foreground">Quick quotes</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
@@ -302,17 +312,15 @@ const Services = () => {
               </div>
               <Accordion type="single" collapsible className="w-full space-y-4">
                 {faqs.map((faq, index) => (
-                  <AccordionItem 
-                    key={index} 
+                  <AccordionItem
+                    key={index}
                     value={`item-${index}`}
                     className="border rounded-lg px-6 bg-background shadow-sm hover:shadow-md transition-shadow"
                   >
                     <AccordionTrigger className="text-left font-semibold hover:no-underline py-5">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground pb-5">
-                      {faq.answer}
-                    </AccordionContent>
+                    <AccordionContent className="text-muted-foreground pb-5">{faq.answer}</AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
