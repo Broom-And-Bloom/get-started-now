@@ -40,6 +40,7 @@ const Services = () => {
         "Weekly or fortnightly visits",
         "Consistent professional team",
         "Tailored cleaning plans",
+        "Where possible we aim to use eco-friendly products",
       ],
       image: domesticImage,
     },
