@@ -5,6 +5,15 @@ import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Sparkles, Home as HomeIcon, Building2, Key, CheckCircle2, Briefcase, ShoppingBag, Users } from "lucide-react";
+import heroImage from "@/assets/hero-cleaning.jpg";
+import domesticImage from "@/assets/domestic-cleaning.jpg";
+import commercialImage from "@/assets/commercial-cleaning.jpg";
+import tenancyImage from "@/assets/end-of-tenancy.jpg";
+import deepCleanImage from "@/assets/deep-cleaning.jpg";
+import moveImage from "@/assets/move-in-out.jpg";
+import constructionImage from "@/assets/post-construction.jpg";
+import airbnbImage from "@/assets/airbnb-cleaning.jpg";
+import propertyImage from "@/assets/property-services.jpg";
 
 const Services = () => {
   const services = [
@@ -12,49 +21,57 @@ const Services = () => {
       icon: HomeIcon,
       title: "Domestic Cleaning",
       description: "Regular home cleaning services designed to maintain a consistently fresh and tidy living environment. Customizable schedules to fit your lifestyle.",
-      features: ["Weekly or bi-weekly visits", "Consistent professional team", "Eco-friendly products", "Tailored cleaning plans"]
+      features: ["Weekly or bi-weekly visits", "Consistent professional team", "Eco-friendly products", "Tailored cleaning plans"],
+      image: domesticImage,
     },
     {
       icon: Building2,
       title: "Commercial Cleaning",
       description: "Keep your business premises spotless and professional. Flexible scheduling including after-hours service to minimize disruption.",
-      features: ["Office cleaning", "Retail space maintenance", "After-hours available", "Industry-certified staff"]
+      features: ["Office cleaning", "Retail space maintenance", "After-hours available", "Industry-certified staff"],
+      image: commercialImage,
     },
     {
       icon: Key,
       title: "End of Tenancy Cleaning",
       description: "Comprehensive deep clean meeting landlord and letting agent standards. Our deposit-back guarantee ensures peace of mind.",
-      features: ["Deposit-back guarantee", "Full property checklist", "Professional equipment", "Certified cleaning team"]
+      features: ["Deposit-back guarantee", "Full property checklist", "Professional equipment", "Certified cleaning team"],
+      image: tenancyImage,
     },
     {
       icon: Sparkles,
       title: "Deep/One-Off Cleaning",
       description: "Thorough single-session cleaning perfect for spring cleans, special occasions, or when your property needs extra attention.",
-      features: ["Top-to-bottom cleaning", "Behind appliances", "Inside cabinets", "Baseboards and fixtures"]
+      features: ["Top-to-bottom cleaning", "Behind appliances", "Inside cabinets", "Baseboards and fixtures"],
+      image: deepCleanImage,
     },
     {
       icon: Users,
       title: "Move-In/Move-Out Cleaning",
       description: "Preparing properties for new occupants with complete turnover cleaning. Making transitions smooth for tenants and landlords.",
-      features: ["Full property preparation", "Kitchen deep clean", "Bathroom sanitization", "Floor and surface cleaning"]
+      features: ["Full property preparation", "Kitchen deep clean", "Bathroom sanitization", "Floor and surface cleaning"],
+      image: moveImage,
     },
     {
       icon: Briefcase,
       title: "Post-Construction Cleaning",
       description: "Specialized cleaning after building work, renovation, or refurbishment. Removing dust, debris, and residue to restore your space.",
-      features: ["Construction dust removal", "Paint splash cleanup", "Window and frame cleaning", "Floor polishing and sealing"]
+      features: ["Construction dust removal", "Paint splash cleanup", "Window and frame cleaning", "Floor polishing and sealing"],
+      image: constructionImage,
     },
     {
       icon: ShoppingBag,
       title: "Airbnb/Holiday Let Cleaning",
       description: "Fast turnaround cleaning between guests to maintain your property's 5-star rating. Reliable service you can count on.",
-      features: ["Quick turnaround", "Linen changes", "Welcome presentation", "Quality inspection"]
+      features: ["Quick turnaround", "Linen changes", "Welcome presentation", "Quality inspection"],
+      image: airbnbImage,
     },
     {
       icon: Building2,
       title: "Property Services",
       description: "Comprehensive property management support including maintenance coordination, regular inspections, and contractor liaison.",
-      features: ["Maintenance coordination", "Regular property inspections", "Contractor liaison", "Quality assurance"]
+      features: ["Maintenance coordination", "Regular property inspections", "Contractor liaison", "Quality assurance"],
+      image: propertyImage,
     }
   ];
 
@@ -90,11 +107,17 @@ const Services = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-accent/10">
-        <div className="container mx-auto px-4">
+      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70" />
+        </div>
+        <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-            <p className="text-lg md:text-xl text-muted-foreground">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Our Services</h1>
+            <p className="text-lg md:text-xl text-foreground/80">
               Comprehensive cleaning solutions tailored to your needs. From regular maintenance to specialized deep cleans.
             </p>
           </div>
@@ -106,20 +129,28 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="grid gap-12 max-w-6xl mx-auto">
             {services.map((service, index) => (
-              <div key={index} className="grid md:grid-cols-3 gap-6 items-start">
-                <div className="md:col-span-1">
-                  <ServiceCard 
-                    icon={service.icon}
-                    title={service.title}
-                    description=""
-                  />
+              <div key={index} className={`grid md:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+                <div className={index % 2 === 1 ? 'md:order-2' : ''}>
+                  <div className="relative h-64 md:h-80 rounded-lg overflow-hidden shadow-lg">
+                    <img 
+                      src={service.image} 
+                      alt={service.title} 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
-                <div className="md:col-span-2">
-                  <p className="text-muted-foreground mb-4">{service.description}</p>
-                  <div className="grid sm:grid-cols-2 gap-2">
+                <div className={index % 2 === 1 ? 'md:order-1' : ''}>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <service.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold">{service.title}</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-6">{service.description}</p>
+                  <div className="grid sm:grid-cols-2 gap-3">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0" />
+                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0" />
                         <span className="text-sm">{feature}</span>
                       </div>
                     ))}
