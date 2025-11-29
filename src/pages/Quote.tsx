@@ -17,7 +17,6 @@ const quoteSchema = z.object({
   phone: z.string().trim().min(1, "Phone is required").max(20),
   address: z.string().trim().min(1, "Address is required").max(200),
   propertyType: z.string().min(1, "Property type is required"),
-  bedrooms: z.string().min(1, "Number of bedrooms is required"),
   services: z.array(z.string()).min(1, "Select at least one service"),
   additionalInfo: z.string().trim().max(500).optional(),
 });
@@ -30,7 +29,6 @@ const Quote = () => {
     phone: "",
     address: "",
     propertyType: "",
-    bedrooms: "",
     services: [] as string[],
     additionalInfo: ""
   });
@@ -43,8 +41,7 @@ const Quote = () => {
     "Deep/One-Off Cleaning",
     "Move-In/Move-Out Cleaning",
     "Post-Construction Cleaning",
-    "Airbnb/Holiday Let Cleaning",
-    "Property Services"
+    "Airbnb/Holiday Let Cleaning"
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -61,7 +58,6 @@ const Quote = () => {
         `Phone: ${validated.phone}\n` +
         `Address: ${validated.address}\n` +
         `Property Type: ${validated.propertyType}\n` +
-        `Bedrooms: ${validated.bedrooms}\n` +
         `Services: ${validated.services.join(", ")}\n` +
         `Additional Info: ${validated.additionalInfo || "N/A"}`
       );
@@ -101,7 +97,6 @@ const Quote = () => {
         phone: "",
         address: "",
         propertyType: "",
-        bedrooms: "",
         services: [],
         additionalInfo: ""
       });
@@ -198,42 +193,21 @@ const Quote = () => {
                     />
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <Label htmlFor="propertyType">Property Type *</Label>
-                      <Select
-                        value={formData.propertyType}
-                        onValueChange={(value) => setFormData(prev => ({ ...prev, propertyType: value }))}
-                      >
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select property type" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="flat">Flat/Apartment</SelectItem>
-                          <SelectItem value="house">House</SelectItem>
-                          <SelectItem value="commercial">Commercial Space</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    <div>
-                      <Label htmlFor="bedrooms">Number of Bedrooms *</Label>
-                      <Select
-                        value={formData.bedrooms}
-                        onValueChange={(value) => setFormData(prev => ({ ...prev, bedrooms: value }))}
-                      >
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select bedrooms" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="studio">Studio</SelectItem>
-                          <SelectItem value="1">1 Bedroom</SelectItem>
-                          <SelectItem value="2">2 Bedrooms</SelectItem>
-                          <SelectItem value="3">3 Bedrooms</SelectItem>
-                          <SelectItem value="4">4 Bedrooms</SelectItem>
-                          <SelectItem value="5+">5+ Bedrooms</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
+                  <div>
+                    <Label htmlFor="propertyType">Property Type *</Label>
+                    <Select
+                      value={formData.propertyType}
+                      onValueChange={(value) => setFormData(prev => ({ ...prev, propertyType: value }))}
+                    >
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select property type" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="flat">Flat/Apartment</SelectItem>
+                        <SelectItem value="house">House</SelectItem>
+                        <SelectItem value="commercial">Commercial Space</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
 
                   {/* Services Selection */}

@@ -1,69 +1,19 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import ServiceCard from "@/components/ServiceCard";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Sparkles, Home as HomeIcon, Building2, Key, CheckCircle2, Phone, Calendar, ThumbsUp, Leaf, Briefcase, ShoppingBag, Users, Shield, Award } from "lucide-react";
+import { Sparkles, CheckCircle2, Phone, Calendar, Leaf, Shield } from "lucide-react";
 import { motion } from "framer-motion";
-import heroImage from "@/assets/hero-cleaning.jpg";
 import logoImage from "@/assets/BroomAndBloomLogo.jpeg";
-import domesticImage from "@/assets/domestic-cleaning.jpg";
-import commercialImage from "@/assets/commercial-cleaning.jpg";
-import tenancyImage from "@/assets/end-of-tenancy.jpg";
 import deepCleanImage from "@/assets/deep-cleaning.jpg";
-import moveImage from "@/assets/move-in-out.jpg";
-import constructionImage from "@/assets/post-construction.jpg";
-import airbnbImage from "@/assets/airbnb-cleaning.jpg";
-import propertyImage from "@/assets/property-services.jpg";
 import whyChooseImage from "@/assets/cleaning-bathroom.jpg";
 const Home = () => {
-  const services = [{
-    icon: HomeIcon,
-    title: "Domestic Cleaning",
-    description: "Regular home cleaning services tailored to your household needs and schedule.",
-    image: domesticImage
-  }, {
-    icon: Building2,
-    title: "Commercial Cleaning",
-    description: "Professional office and business premises cleaning for a spotless workspace.",
-    image: commercialImage
-  }, {
-    icon: Key,
-    title: "End of Tenancy Cleaning",
-    description: "Comprehensive cleaning with deposit-back guarantee for tenants and landlords.",
-    image: tenancyImage
-  }, {
-    icon: Sparkles,
-    title: "Deep/One-Off Cleaning",
-    description: "Thorough single-session cleaning for spring cleans or special occasions.",
-    image: deepCleanImage
-  }, {
-    icon: Users,
-    title: "Move-In/Move-Out Cleaning",
-    description: "Preparing properties for new occupants with complete turnover cleaning.",
-    image: moveImage
-  }, {
-    icon: Briefcase,
-    title: "Post-Construction Cleaning",
-    description: "Removing dust and debris after builders, renovation, or construction work.",
-    image: constructionImage
-  }, {
-    icon: ShoppingBag,
-    title: "Airbnb/Holiday Let Cleaning",
-    description: "Quick turnaround cleaning between guests to maintain 5-star standards.",
-    image: airbnbImage
-  }, {
-    icon: Building2,
-    title: "Property Services",
-    description: "Property management support including maintenance coordination and inspections.",
-    image: propertyImage
-  }];
   const howItWorks = [{
     icon: Phone,
     title: "Get in Touch",
     description: "Contact us via phone, WhatsApp, or our quote form to discuss your needs"
   }, {
-    icon: HomeIcon,
+    icon: Sparkles,
     title: "Free Property Visit",
     description: "We'll visit your property to assess the job and provide an accurate quote"
   }, {
@@ -71,7 +21,7 @@ const Home = () => {
     title: "Book Your Clean",
     description: "Once you're happy with the quote, we'll schedule a convenient time"
   }, {
-    icon: Sparkles,
+    icon: CheckCircle2,
     title: "Enjoy Your Space",
     description: "Our professional team delivers exceptional results every time"
   }];
@@ -115,35 +65,31 @@ Cleaning and Property Services<br />
         </motion.div>
       </section>
 
-      {/* Services Grid */}
+      {/* About Section */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive cleaning solutions tailored to your needs
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => <motion.div key={index} initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true
-          }} transition={{
-            delay: index * 0.1,
-            duration: 0.5
-          }}>
-                <ServiceCard {...service} image={service.image} />
-              </motion.div>)}
-          </div>
-          <div className="text-center mt-8">
-            <Button variant="outline" size="lg" asChild>
-              <Link to="/services">View All Services</Link>
-            </Button>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">About Broom & Bloom</h2>
+            <div className="text-lg text-muted-foreground space-y-4">
+              <p>
+                Welcome to Broom & Bloom, your trusted partner for professional cleaning services across Leicestershire. 
+                We're dedicated to transforming homes and businesses with meticulous care, attention to detail, and a commitment to sustainable practices.
+              </p>
+              <p>
+                Our experienced team takes pride in delivering exceptional results every time. Whether you need regular maintenance cleaning, 
+                a thorough deep clean, or specialized services like end-of-tenancy cleaning, we have the expertise to exceed your expectations.
+              </p>
+              <p>
+                What sets us apart is our dedication to using eco-friendly products wherever possible, ensuring a safe and healthy environment 
+                for your family, pets, and employees. All our staff are DBS-checked, fully insured, and professionally trained to deliver 
+                the highest standards of service.
+              </p>
+            </div>
+            <div className="mt-8">
+              <Button size="lg" asChild>
+                <Link to="/services">Explore Our Services</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

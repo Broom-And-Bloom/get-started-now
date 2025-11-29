@@ -65,13 +65,6 @@ const Services = () => {
       description: "Fast turnaround cleaning between guests to maintain your property's 5-star rating. Reliable service you can count on.",
       features: ["Quick turnaround", "Linen changes", "Welcome presentation", "Quality inspection"],
       image: airbnbImage,
-    },
-    {
-      icon: Building2,
-      title: "Property Services",
-      description: "Comprehensive property management support including maintenance coordination, regular inspections, and contractor liaison.",
-      features: ["Maintenance coordination", "Regular property inspections", "Contractor liaison", "Quality assurance"],
-      image: propertyImage,
     }
   ];
 
