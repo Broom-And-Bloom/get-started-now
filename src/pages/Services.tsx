@@ -39,7 +39,6 @@ const Services = () => {
       features: [
         "Weekly or fortnightly visits",
         "Consistent professional team",
-        "Eco-friendly products",
         "Tailored cleaning plans",
       ],
       image: domesticImage,
