@@ -27,7 +27,7 @@ import commercialImage from "@/assets/commercial-cleaning.jpg";
 import tenancyImage from "@/assets/end-of-tenancy.jpg";
 import deepCleanImage from "@/assets/deep-cleaning.jpg";
 import moveImage from "@/assets/move-in-out.jpg";
-import constructionImage from "@/assets/post-construction-cleaning.jpg";
+import constructionImage from "@/assets/post-construction.jpg";
 import airbnbImage from "@/assets/airbnb-cleaning.jpg";
 import propertyImage from "@/assets/property-services.jpg";
 const Services = () => {
