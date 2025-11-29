@@ -87,7 +87,7 @@ const Services = () => {
     },
     {
       icon: ShoppingBag,
-      title: "Airbnb & Holiday-Let Changeover Cleans",
+      title: "Airbnb Cleaning",
       description:
         "Reliable, quick-turnaround cleans tailored for Airbnb hosts and holiday-let owners. We reset your property between guests, refresh linens (if provided), restock essentials, and ensure your space is spotless, welcoming, and ready for the next arrival.",
       features: ["Quick turnaround", "Linen changes", "Welcome presentation", "Quality inspection"],
