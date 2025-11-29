@@ -48,7 +48,7 @@ const Services = () => {
       icon: Building2,
       title: "Commercial Cleaning",
       description: "Professional, discreet workplace cleaning that keeps your environment welcoming and productive.",
-      features: ["Office cleaning"],
+      features: ["Office cleaning (before or after hours)"],
       image: commercialImage,
     },
     {
