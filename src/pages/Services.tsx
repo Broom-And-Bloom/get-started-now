@@ -36,9 +36,9 @@ const Services = () => {
       icon: HomeIcon,
       title: "Domestic Cleaning",
       description:
-        "Regular home cleaning services designed to maintain a consistently fresh and tidy living environment. Customizable schedules to fit your lifestyle.",
+        "Regular home cleaning services designed to maintain a consistently fresh and tidy living environment. Customisable schedules to fit your lifestyle.",
       features: [
-        "Weekly or bi-weekly visits",
+        "Weekly or fortnightly visits",
         "Consistent professional team",
         "Eco-friendly products",
         "Tailored cleaning plans",
@@ -86,7 +86,7 @@ const Services = () => {
       icon: Briefcase,
       title: "Post-Construction Cleaning",
       description:
-        "Specialized cleaning after building work, renovation, or refurbishment. Removing dust, debris, and residue to restore your space.",
+        "Specialised cleaning after building work, renovation, or refurbishment. Removing dust, debris, and residue to restore your space.",
       features: ["Construction dust removal", "Window and frame cleaning", "Floor polishing and sealing"],
       image: constructionImage,
     },
