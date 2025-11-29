@@ -37,13 +37,13 @@ const Quote = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const serviceOptions = [
-    "Regular Cleaning",
-    "Deep Cleaning",
-    "End of Tenancy",
-    "After Builders",
-    "Carpet Cleaning",
-    "Window Cleaning",
+    "Domestic Cleaning",
     "Commercial Cleaning",
+    "End of Tenancy Cleaning",
+    "Deep/One-Off Cleaning",
+    "Move-In/Move-Out Cleaning",
+    "Post-Construction Cleaning",
+    "Airbnb/Holiday Let Cleaning",
     "Property Services"
   ];
 

@@ -3,50 +3,50 @@ import { Button } from "@/components/ui/button";
 import ServiceCard from "@/components/ServiceCard";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Sparkles, Home as HomeIcon, Building2, Hammer, Wind, Droplet, Key, CheckCircle2, Phone, Calendar, ThumbsUp, Leaf } from "lucide-react";
+import { Sparkles, Home as HomeIcon, Building2, Key, CheckCircle2, Phone, Calendar, ThumbsUp, Leaf, Briefcase, ShoppingBag, Users } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Home = () => {
   const services = [
     {
-      icon: Sparkles,
-      title: "Regular Cleaning",
-      description: "Weekly or bi-weekly cleaning to keep your space fresh and tidy."
-    },
-    {
       icon: HomeIcon,
-      title: "Deep Cleaning",
-      description: "Thorough top-to-bottom cleaning for every corner of your home."
-    },
-    {
-      icon: Key,
-      title: "End of Tenancy",
-      description: "Professional cleaning to ensure your deposit back guarantee."
-    },
-    {
-      icon: Hammer,
-      title: "After Builders Cleaning",
-      description: "Remove dust and debris after renovation or construction work."
-    },
-    {
-      icon: Wind,
-      title: "Carpet Cleaning",
-      description: "Deep steam cleaning to refresh and sanitize your carpets."
-    },
-    {
-      icon: Droplet,
-      title: "Window Cleaning",
-      description: "Sparkling clean windows inside and out for maximum light."
+      title: "Domestic Cleaning",
+      description: "Regular home cleaning services tailored to your household needs and schedule."
     },
     {
       icon: Building2,
       title: "Commercial Cleaning",
-      description: "Professional office and commercial space cleaning services."
+      description: "Professional office and business premises cleaning for a spotless workspace."
+    },
+    {
+      icon: Key,
+      title: "End of Tenancy Cleaning",
+      description: "Comprehensive cleaning with deposit-back guarantee for tenants and landlords."
+    },
+    {
+      icon: Sparkles,
+      title: "Deep/One-Off Cleaning",
+      description: "Thorough single-session cleaning for spring cleans or special occasions."
+    },
+    {
+      icon: Users,
+      title: "Move-In/Move-Out Cleaning",
+      description: "Preparing properties for new occupants with complete turnover cleaning."
+    },
+    {
+      icon: Briefcase,
+      title: "Post-Construction Cleaning",
+      description: "Removing dust and debris after builders, renovation, or construction work."
+    },
+    {
+      icon: ShoppingBag,
+      title: "Airbnb/Holiday Let Cleaning",
+      description: "Quick turnaround cleaning between guests to maintain 5-star standards."
     },
     {
       icon: Building2,
       title: "Property Services",
-      description: "Full property management support including maintenance coordination."
+      description: "Property management support including maintenance coordination and inspections."
     }
   ];
 
@@ -87,11 +87,11 @@ const Home = () => {
             className="max-w-3xl mx-auto text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Professional Cleaning<br />
-              <span className="text-primary">with an Eco-Friendly Touch</span>
+              Broom & Bloom<br />
+              <span className="text-primary">Cleaning & Property Services</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              Bringing sparkle to your space while caring for our planet. Expert cleaning services across London & surrounding areas.
+              Professional, eco-friendly cleaning services across Leicestershire. Transforming homes and businesses with meticulous care and sustainable practices.
             </p>
             <motion.div 
               initial={{ opacity: 0 }}
@@ -143,34 +143,58 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Eco Promise */}
+      {/* Why Choose Us / Trust Signals */}
       <section className="py-16 md:py-24 bg-accent/20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <Leaf className="h-12 w-12 text-primary" />
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Why Choose Broom & Bloom?</h2>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">DBS-Checked & Vetted Staff</h3>
+                  <p className="text-muted-foreground">All our cleaning professionals are thoroughly background-checked and vetted for your peace of mind.</p>
+                </div>
               </div>
-              <div>
-                <h2 className="text-3xl font-bold mb-4">Our Eco Promise</h2>
-                <p className="text-lg text-muted-foreground mb-4">
-                  We're committed to protecting the environment while delivering exceptional cleaning results. All our products are eco-friendly, biodegradable, and safe for your family, pets, and the planet.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-primary mt-0.5" />
-                    <span>100% eco-friendly cleaning products</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-primary mt-0.5" />
-                    <span>Sustainable cleaning practices</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-primary mt-0.5" />
-                    <span>Safe for children and pets</span>
-                  </li>
-                </ul>
+              
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Fully Insured</h3>
+                  <p className="text-muted-foreground">Comprehensive insurance coverage protects you, your property, and our team.</p>
+                </div>
               </div>
+              
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <CheckCircle2 className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Infection-Control Trained</h3>
+                  <p className="text-muted-foreground">Our team is professionally trained in infection control and prevention protocols.</p>
+                </div>
+              </div>
+              
+              <div className="flex gap-4">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Leaf className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Eco-Friendly Products</h3>
+                  <p className="text-muted-foreground">100% environmentally friendly, biodegradable cleaning products safe for your family and pets.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-muted/50 p-6 rounded-lg">
+              <p className="text-sm text-muted-foreground text-center">
+                <strong>Professional Collaboration:</strong> We work alongside trusted third-party specialists for specialized services. While we coordinate these partnerships, we are not responsible for the services provided by external contractors.
+              </p>
             </div>
           </div>
         </div>
@@ -203,7 +227,7 @@ const Home = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Experience the Difference?</h2>
           <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-            Get your free, no-obligation quote today and discover why homeowners across London trust Broom & Bloom.
+            Get your free, no-obligation quote today and discover why residents across Leicestershire trust Broom & Bloom.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>

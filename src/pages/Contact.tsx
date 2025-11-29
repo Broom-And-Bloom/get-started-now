@@ -197,7 +197,7 @@ const Contact = () => {
                       <div>
                         <p className="font-medium">Service Area</p>
                         <p className="text-muted-foreground">
-                          London & Surrounding Areas
+                          Leicestershire & Surrounding Areas
                         </p>
                       </div>
                     </div>
