@@ -114,7 +114,7 @@ const Home = () => {
                   Anyone who joins the Broom & Bloom team must meet those same high standards. Cleaning isn't easy, it's skilled, physical work and I'm proud to say we put genuine care into every home and every task. Wherever possible, we go the extra mile for our clients, because it's the little touches that make the biggest difference.
                 </p>
                 
-                <p className="text-foreground font-medium pt-4">
+                <p className="text-muted-foreground pt-4">
                   Hoping to see you soon!
                 </p>
                 
