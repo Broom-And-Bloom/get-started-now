@@ -87,7 +87,7 @@ const Quote = () => {
       } else {
         toast({
           title: "Quote Request Sent!",
-          description: "We'll get back to you with a personalized quote soon.",
+          description: "We'll get back to you with a personalised quote soon.",
         });
       }
       
