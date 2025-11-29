@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import logo from "@/assets/BroomAndBloomLogo.jpeg";
-
 const Footer = () => {
-  return (
-    <footer className="bg-primary text-primary-foreground">
+  return <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
@@ -72,7 +70,7 @@ const Footer = () => {
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
                 <a href="mailto:info@broomandbloom.co.uk" className="opacity-90 hover:opacity-100 transition-opacity">
-                  info@broomandbloom.co.uk
+                  Hello@broomandbloom.co.uk
                 </a>
               </li>
               <li className="flex items-start gap-2">
@@ -87,8 +85,6 @@ const Footer = () => {
           <p>&copy; {new Date().getFullYear()} Broom & Bloom. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
