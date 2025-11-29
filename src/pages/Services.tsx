@@ -35,8 +35,7 @@ const Services = () => {
     {
       icon: HomeIcon,
       title: "Domestic Cleaning",
-      description:
-        "Thoughtful, consistent home cleaning designed entirely around your routine.",
+      description: "Thoughtful, consistent home cleaning designed entirely around your routine.",
       features: [
         "Weekly or fortnightly visits",
         "Consistent professional team",
@@ -48,16 +47,14 @@ const Services = () => {
     {
       icon: Building2,
       title: "Commercial Cleaning",
-      description:
-        "Professional, discreet workplace cleaning that keeps your environment welcoming and productive.",
+      description: "Professional, discreet workplace cleaning that keeps your environment welcoming and productive.",
       features: ["Office cleaning", "Retail space maintenance", "Industry-certified staff"],
       image: commercialImage,
     },
     {
       icon: Key,
       title: "End of Tenancy Cleaning",
-      description:
-        "A complete, top-to-bottom clean to help make moving out smooth and stress-free.",
+      description: "A complete, top-to-bottom clean to help make moving out smooth and stress-free.",
       features: ["Full property checklist", "Professional equipment", "Certified cleaning team"],
       image: tenancyImage,
     },
@@ -72,8 +69,7 @@ const Services = () => {
     {
       icon: Users,
       title: "Move-In Cleaning",
-      description:
-        "Start fresh in your new home with a beautifully prepared and hygienic space before you unpack.",
+      description: "Start fresh in your new home with a beautifully prepared and hygienic space before you unpack.",
       features: [
         "Full property preparation",
         "Kitchen deep clean",
@@ -109,11 +105,6 @@ const Services = () => {
       question: "Are you insured?",
       answer:
         "Absolutely. We carry full liability insurance and all our cleaners are vetted, trained, and insured for your peace of mind.",
-    },
-    {
-      question: "What if I'm not satisfied with the cleaning?",
-      answer:
-        "Your satisfaction is our priority. If you're not completely happy, contact us within 24 hours and we'll return to address any concerns at no extra charge.",
     },
     {
       question: "How do I book a service?",
