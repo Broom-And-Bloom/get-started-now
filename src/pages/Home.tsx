@@ -45,9 +45,9 @@ const Home = () => {
       }} transition={{
         duration: 0.6
       }} className="relative z-10 max-w-4xl mx-auto px-4 text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">Broom & Bloom
-Cleaning and Property Services<br />
-            
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground leading-tight">
+            Broom & Bloom<br />
+            <span className="text-3xl md:text-5xl">Cleaning and Property Services</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-foreground/80">
             Professional, eco-friendly cleaning services across the Melton Mowbray area. Transforming homes and businesses with meticulous care and sustainable practices.
