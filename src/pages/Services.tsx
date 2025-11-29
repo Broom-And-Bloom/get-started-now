@@ -36,7 +36,7 @@ const Services = () => {
       icon: HomeIcon,
       title: "Domestic Cleaning",
       description:
-        "Regular home cleaning services designed to maintain a consistently fresh and tidy living environment. Customisable schedules to fit your lifestyle.",
+        "Thoughtful, consistent home cleaning designed entirely around your routine.",
       features: [
         "Weekly or fortnightly visits",
         "Consistent professional team",
@@ -49,7 +49,7 @@ const Services = () => {
       icon: Building2,
       title: "Commercial Cleaning",
       description:
-        "Keep your business premises spotless and professional. Flexible scheduling including after-hours service to minimize disruption.",
+        "Professional, discreet workplace cleaning that keeps your environment welcoming and productive.",
       features: ["Office cleaning", "Retail space maintenance", "Industry-certified staff"],
       image: commercialImage,
     },
@@ -57,7 +57,7 @@ const Services = () => {
       icon: Key,
       title: "End of Tenancy Cleaning",
       description:
-        "Comprehensive deep clean meeting landlord and letting agent standards. Our deposit-back guarantee ensures peace of mind.",
+        "A complete, top-to-bottom clean to help make moving out smooth and stress-free.",
       features: ["Full property checklist", "Professional equipment", "Certified cleaning team"],
       image: tenancyImage,
     },
@@ -65,7 +65,7 @@ const Services = () => {
       icon: Sparkles,
       title: "Deep/One-Off Cleaning",
       description:
-        "Thorough single-session cleaning perfect for spring cleans, special occasions, or when your property needs extra attention.",
+        "An intensive clean ideal for seasonal refreshes, special occasions, or whenever you need an extra hand.",
       features: ["Top-to-bottom cleaning", "Behind appliances", "Inside cabinets", "Baseboards and fixtures"],
       image: deepCleanImage,
     },
@@ -73,7 +73,7 @@ const Services = () => {
       icon: Users,
       title: "Move-In Cleaning",
       description:
-        "Preparing properties for new occupants with complete turnover cleaning. Making transitions smooth for tenants and landlords.",
+        "Start fresh in your new home with a beautifully prepared and hygienic space before you unpack.",
       features: [
         "Full property preparation",
         "Kitchen deep clean",
@@ -86,15 +86,15 @@ const Services = () => {
       icon: Briefcase,
       title: "Post-Construction Cleaning",
       description:
-        "Specialised cleaning after building work, renovation, or refurbishment. Removing dust, debris, and residue to restore your space.",
+        "We remove fine dust, debris, and renovation residue so you can enjoy the finished results of your project.",
       features: ["Construction dust removal", "Window and frame cleaning", "Floor polishing and sealing"],
       image: constructionImage,
     },
     {
       icon: ShoppingBag,
-      title: "Airbnb Cleaning",
+      title: "Airbnb & Holiday-Let Changeover Cleans",
       description:
-        "Fast turnaround cleaning between guests to maintain your property's 5-star rating. Reliable service you can count on.",
+        "Reliable, quick-turnaround cleans tailored for Airbnb hosts and holiday-let owners. We reset your property between guests, refresh linens (if provided), restock essentials, and ensure your space is spotless, welcoming, and ready for the next arrival.",
       features: ["Quick turnaround", "Linen changes", "Welcome presentation", "Quality inspection"],
       image: airbnbImage,
     },
